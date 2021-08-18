@@ -4,9 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>quizpt1</title>
 </head>
+<style>
+div.quizAF {
+    color: crimson;
+    background-color: gray;
+    margin: 10px;
+	padding: 10px;
+	border: double black 5px;
+	text-align: left;
+	width: 500px;
+	height: 30px;
+	font-family: Courier;
+	font-size: 20px;
+	float: left;
+	clear: left;
+    text-decoration: none;
+	display: block;
+}
+div.quizQ {
+font-size:40px;
+}
+div.quizAR {
+    color: crimson;
+    background-color: gray;
+    margin: 10px;
+	padding: 10px;
+	border: double black 5px;
+	text-align: left;
+	width: 500px;
+	height: 30px;
+	font-family: Courier;
+	font-size: 20px;
+	float: left;
+	clear: left;
+    text-decoration: none;
+	display: block;
+}
+button.nextQ {
+display: none;
+}
+button.reset {
+display: none;
+}
+</style>
+
+
 <body>
-    
+<div class='quizQ'>hvilken av disse film quotene er i alle star wars filmene?</div>
+    <div id="svar1" onclick="Feil()" class='quizAF'>"May the force be with you"</div>
+		<div id="svar4" onclick="riktig()" class='quizAR'>"Ive got a bad feeling about this"</div>
+	<div id="svar2" onclick="Feil()" class='quizAF'>"the Dark side of the force is a pathway that many consider, unnatural"</div>
+	<div id="svar3" onclick="Feil()" class='quizAF'>"misa jar jar binks"</div>
+	<button class="nextQ" id="nextQ" onclick="document.location='file:///E:/Ny%20mappe%20(6)/linked.html'"> Next </button> 
+	<button class="reset" id="reset" onclick="document.location='file:///E:/Ny%20mappe%20(6)/HTMLPage1.html'"> Reset </button> 
+<script>
+function riktig() {
+document.getElementById("nextQ").style.display = "block";
+document.getElementById("svar1").style.display = "none";
+document.getElementById("svar2").style.display = "none";
+document.getElementById("svar3").style.display = "none";
+document.getElementById("svar4").style.display = "none";
+}
+function Feil() {
+document.getElementById("reset").style.display = "block";
+document.getElementById("svar1").style.display = "none";
+document.getElementById("svar2").style.display = "none";
+document.getElementById("svar3").style.display = "none";
+document.getElementById("svar4").style.display = "none";
+}
+</script>
 </body>
 </html>
