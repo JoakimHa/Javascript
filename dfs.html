@@ -6,7 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+div.quizAF {
+    color: crimson;
+    background-color: gray;
+    margin: 10px;
+	padding: 10px;
+	border: double black 5px;
+	text-align: left;
+	width: 100px;
+	height: 30px;
+	font-family: Courier;
+	font-size: 20px;
+	float: left;
+	clear: left;
+    text-decoration: none;
+	display: block;
+}
+div.quizQ {
+font-size:40px;
+}
+div.quizAR {
+    color: crimson;
+    background-color: gray;
+    margin: 10px;
+	padding: 10px;
+	border: double black 5px;
+	text-align: left;
+	width: 100px;
+	height: 30px;
+	font-family: Courier;
+	font-size: 20px;
+	float: left;
+	clear: left;
+    text-decoration: none;
+	display: block;
+}
+button.reset {
+display: none;
+}
+img {
+height: 100px;
+width: 100px;
+clear: left;
+}
+
+</style>
+
+
 <body>
-    
+<div class='quizQ'>Hvilken klone fra "clone wars er dette? </div>
+<img src="https://i.redd.it/u7w9ict15hk41.jpg">
+
+    <div id="svar1" onclick="Feil()" class='quizAF'>Rex</div>
+	<div id="svar2" onclick="Feil()" class='quizAF'>Cody</div>
+	<div id="svar3" onclick="Feil()" class='quizAF'>Bly</div>
+	<div id="svar4" onclick="riktig()" class='quizAR'>Fives </div>
+	<button class="reset" id="reset" onclick="document.location='https://joakimha.github.io/Javascript/dfs.html'"> Reset </button> 
+<script>
+function riktig() {
+document.getElementById("svar1").style.display = "none";
+document.getElementById("svar2").style.display = "none";
+document.getElementById("svar3").style.display = "none";
+document.getElementById("svar4").style.display = "none";
+}
+function Feil() {
+document.getElementById("reset").style.display = "block";
+document.getElementById("svar1").style.display = "none";
+document.getElementById("svar2").style.display = "none";
+document.getElementById("svar3").style.display = "none";
+document.getElementById("svar4").style.display = "none";
+}
+</script>
 </body>
 </html>
